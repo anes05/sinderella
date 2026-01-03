@@ -10061,3 +10061,33 @@ textarea.form-control {
   
   
 
+  .popup-img {
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+    .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+  }
+  
