@@ -1,27 +1,14 @@
-# Use a lightweight Linux image
+# The Docker image that will be used to build your app
 image: alpine:latest
-
-pages:
-  stage: deploy
-
-  script:
-    # Create the public folder required by GitLab Pages
-    - mkdir -p public
-
-    # Copy your website files (from dev/ folder)
-    - cp -r dev/* public
-
-    # Optional: remove unnecessary files
-    - rm -rf public/.git
-
-  artifacts:
-    paths:
-      - public
-
+create-pages:
+  pages:
+    # The folder that contains the files to be exposed at the Page URL
+    publish: public
   rules:
-    # Only deploy when pushing to the default branch (main/master)
+    # This ensures that only pushes to the default branch will trigger
+    # a pages deploy
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
-
-    # Only run if something inside dev/ changed
-    - changes:
-        - dev/**
+  # Functions that should be executed before the build script is run
+  before_script: []
+  script:
+    - echo "No build step required"
