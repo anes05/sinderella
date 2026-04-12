@@ -1,9 +1,17 @@
-# .gitlab-ci.yml
 image: alpine:latest
 
 pages:
-  publish: "."               # Serve everything from the root
-  rules:
-    - if: $CI_COMMIT_REF_NAME == "dev"
   script:
-    - echo "Deploying from dev branch to GitLab Pages"
+    - mkdir -p public
+
+    # Copy ONLY production-ready files
+    - cp index.html about.html blog.html shop.html cart.html checkout.html contact.html wishlist.html product-single.html blog-single.html categories public/
+
+    - cp -r css js images fonts public/
+
+  artifacts:
+    paths:
+      - public
+
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
