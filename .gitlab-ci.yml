@@ -1,17 +1,16 @@
+# .gitlab-ci.yml
 image: alpine:latest
 
 pages:
+  publish: "."
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "dev"   # Deploy from dev branch
   script:
     - mkdir -p public
-
-    # Copy ONLY production-ready files
-    - cp index.html about.html blog.html shop.html cart.html checkout.html contact.html wishlist.html product-single.html blog-single.html categories public/
-
+    # Copy HTML files from root to public
+    - cp index.html about.html blog.html shop.html cart.html checkout.html contact.html wishlist.html product-single.html blog-single.html public/
+    # Copy asset folders
     - cp -r css js images fonts public/
-
-  artifacts:
-    paths:
-      - public
-
-  rules:
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+    # Optional: remove large unused files to keep artifact size small
+    - find public -name "*.map" -delete
+    - echo "Site prepared for deployment"
