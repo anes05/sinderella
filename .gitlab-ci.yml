@@ -2,8 +2,8 @@
 image: alpine:latest
 
 pages:
-  publish: public
+  publish: "."               # Serve everything from the root
   rules:
-    - if: $CI_COMMIT_REF_NAME == "dev"   # 👈 changed from $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_REF_NAME == "dev"
   script:
-    - echo "Deploying static site from dev branch"
+    - echo "Deploying from dev branch to GitLab Pages"
