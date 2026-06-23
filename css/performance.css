@@ -76,3 +76,139 @@ body.page-leaving {
       -ms-transform: scale(1.07) !important;
           transform: scale(1.07) !important;
 }
+
+/* ======================================================
+   NAVBAR IMPROVEMENTS
+   ====================================================== */
+
+/* Brand */
+.ftco-navbar-light .navbar-brand {
+  font-weight: 700;
+  font-size: 21px;
+  letter-spacing: 1.5px;
+  color: #82ae46 !important;
+  -webkit-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.ftco-navbar-light .navbar-brand:hover,
+.ftco-navbar-light .navbar-brand:focus {
+  opacity: 0.8;
+  color: #82ae46 !important;
+}
+
+/* Nav link hover — animated green underline */
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+  position: relative;
+  -webkit-transition: color 0.22s ease;
+  -o-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 14px;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: #82ae46;
+  border-radius: 2px;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 0.22s ease;
+  transition: transform 0.22s ease;
+}
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover,
+.ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link {
+  color: #82ae46 !important;
+}
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover::before,
+.ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link::before {
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+/* Scrolled state — keep green on active */
+.ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link:hover,
+.ftco-navbar-light.scrolled .navbar-nav > .nav-item.active > .nav-link {
+  color: #82ae46 !important;
+}
+.ftco-navbar-light.scrolled {
+  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08) !important;
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Dropdown panel */
+.ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
+  border-radius: 12px !important;
+  border: 1px solid rgba(0, 0, 0, 0.07) !important;
+  -webkit-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.11) !important;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.11) !important;
+  padding: 8px 0 !important;
+  margin-top: 6px !important;
+  -webkit-animation: navDropIn 0.2s ease forwards;
+          animation: navDropIn 0.2s ease forwards;
+  -webkit-transform-origin: top center;
+      -ms-transform-origin: top center;
+          transform-origin: top center;
+}
+
+@-webkit-keyframes navDropIn {
+  from { opacity: 0; -webkit-transform: translateY(-8px) scale(0.98); transform: translateY(-8px) scale(0.98); }
+  to   { opacity: 1; -webkit-transform: translateY(0)   scale(1);    transform: translateY(0)   scale(1); }
+}
+@keyframes navDropIn {
+  from { opacity: 0; transform: translateY(-8px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+
+/* Dropdown items */
+.ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 9px 20px 9px 18px !important;
+  color: #444 !important;
+  letter-spacing: 0.3px;
+  border-left: 3px solid transparent;
+  -webkit-transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, padding-left 0.18s ease;
+  -o-transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, padding-left 0.18s ease;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, padding-left 0.18s ease;
+}
+.ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:hover,
+.ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:focus {
+  background: #f5faee !important;
+  color: #82ae46 !important;
+  border-left-color: #82ae46;
+  padding-left: 22px !important;
+}
+.ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:first-child {
+  border-radius: 9px 9px 0 0;
+}
+.ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:last-child {
+  border-radius: 0 0 9px 9px;
+}
+
+/* Language selector items */
+.dropdown-menu .dropdown-lang {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 20px;
+  color: #444;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  -webkit-transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  -o-transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  letter-spacing: 1px;
+}
+.dropdown-menu .dropdown-lang:hover {
+  background: #f5faee;
+  color: #82ae46;
+  border-left-color: #82ae46;
+}
