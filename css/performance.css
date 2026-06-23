@@ -1,0 +1,61 @@
+/* ==============================
+   Image Fade-In on Load
+   ============================== */
+img.img-pending {
+  opacity: 0;
+}
+
+img.img-loaded {
+  opacity: 1;
+  -webkit-transition: opacity 0.45s ease;
+  -o-transition: opacity 0.45s ease;
+  transition: opacity 0.45s ease;
+}
+
+/* ==============================
+   Background Image Placeholders
+   Prevents jarring blank sections while bg images load
+   ============================== */
+.category-wrap,
+.category-wrap-2,
+.hero-wrap,
+.slider-item,
+.user-img {
+  background-color: #e8e0d4;
+}
+
+/* ==============================
+   Product Image Aspect Ratio
+   Prevents layout shift while images load
+   ============================== */
+.product .img-prod img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* ==============================
+   GPU Acceleration for Carousel & Scroll Animations
+   ============================== */
+.owl-carousel .owl-item,
+.ftco-animate,
+.slider-item {
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+/* ==============================
+   Smooth Page-Exit Transition
+   ============================== */
+body {
+  -webkit-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+body.page-leaving {
+  opacity: 0 !important;
+}

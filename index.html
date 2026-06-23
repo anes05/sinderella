@@ -8,16 +8,10 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Amatic+SC:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
@@ -39,11 +33,8 @@
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
-    <link
-      rel="preload"
-      as="image"
-      href="./images/fruits_secs/mise_en_scene/amande_copie.jpg"
-    />
+    <link rel="stylesheet" href="css/performance.css" />
+    <link rel="preload" as="image" href="./images/fruits_secs/fuits_secs.jpg" fetchpriority="high" />
   </head>
   <body class="goto-here">
     <div class="py-1 bg-primary">
@@ -362,6 +353,7 @@
                   onclick="openPopup(this.querySelector('img').src); return false;"
                   src="images/fruits_secs/cacahuete/granulee_croquant.jpg"
                   alt="Colorlib Template"
+                  loading="lazy" decoding="async"
                 />
                 <!-- <span class="status">30%</span>
     						<div class="overlay"></div> -->
@@ -397,6 +389,7 @@
                   class="img-fluid"
                   src="images/fruits_secs/amande/croquant.jpg"
                   alt="Colorlib Template"
+                  loading="lazy" decoding="async"
                 />
                 <!-- <span class="status">30%</span>
     						<div class="overlay"></div> -->
@@ -432,6 +425,7 @@
                   class="img-fluid"
                   src="images/fruits_secs/cajou/croquant.jpg"
                   alt="Colorlib Template"
+                  loading="lazy" decoding="async"
                 />
                 <!-- <span class="status">30%</span>
     						<div class="overlay"></div> -->
@@ -467,6 +461,7 @@
                   class="img-fluid"
                   src="images/fruits_secs/noisette/granule_croquant.jpg"
                   alt="Colorlib Template"
+                  loading="lazy" decoding="async"
                 />
                 <!-- <span class="status">30%</span>
     						<div class="overlay"></div> -->
@@ -502,6 +497,7 @@
                   class="img-fluid"
                   src="images/fruits_secs/pistache/croquant.jpg"
                   alt="Colorlib Template"
+                  loading="lazy" decoding="async"
                 />
                 <!-- <span class="status">30%</span>
     						<div class="overlay"></div> -->
@@ -836,6 +832,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/performance.js"></script>
     <!-- <script> $(document).ready(function() {
     $('.dropdown-submenu > a.dropdown-toggle').on('click', function(e) {
       const parent = $(this).parent();
@@ -959,9 +956,12 @@
           }
         });
 
-        // Optional: reapply logic on resize
+        // Dropdown state reset on resize (no full reload)
         window.addEventListener("resize", function () {
-          location.reload();
+          dropdowns.forEach(function (dropdown) {
+            dropdown.querySelector(".dropdown-menu").classList.remove("show");
+            dropdown.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "false");
+          });
         });
       });
     </script>

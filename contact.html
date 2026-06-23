@@ -8,16 +8,10 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Amatic+SC:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
@@ -39,11 +33,7 @@
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
-    <link
-      rel="preload"
-      as="image"
-      href="./images/fruits_secs/mise_en_scene/amande_copie.jpg"
-    />
+    <link rel="stylesheet" href="css/performance.css" />
   </head>
   <body class="goto-here">
     <div class="py-1 bg-primary">
@@ -364,9 +354,12 @@
           }
         });
 
-        // Optional: reapply logic on resize
+        // Dropdown state reset on resize (no full reload)
         window.addEventListener("resize", function () {
-          location.reload();
+          dropdowns.forEach(function (dropdown) {
+            dropdown.querySelector(".dropdown-menu").classList.remove("show");
+            dropdown.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "false");
+          });
         });
       });
     </script>
@@ -377,5 +370,6 @@
           document.getElementById("navbar").innerHTML = data;
         });
     </script>
+    <script src="js/performance.js"></script>
   </body>
 </html>
