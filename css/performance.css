@@ -13,29 +13,6 @@ img.img-loaded {
 }
 
 /* ==============================
-   Background Image Placeholders
-   Prevents jarring blank sections while bg images load
-   ============================== */
-.category-wrap,
-.category-wrap-2,
-.hero-wrap,
-.slider-item,
-.user-img {
-  background-color: #e8e0d4;
-}
-
-/* ==============================
-   Product Image Aspect Ratio
-   Prevents layout shift while images load
-   ============================== */
-.product .img-prod img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-/* ==============================
    GPU Acceleration for Carousel & Scroll Animations
    ============================== */
 .owl-carousel .owl-item,
@@ -58,4 +35,44 @@ body {
 
 body.page-leaving {
   opacity: 0 !important;
+}
+
+/* ==============================
+   Product Card — Rounded Corners
+   ============================== */
+.product {
+  border-radius: 14px;
+  border: 1px solid #ebebeb;
+  overflow: hidden;
+  -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  -webkit-transition: -webkit-box-shadow 0.35s ease, -webkit-transform 0.35s ease;
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.product .img-prod {
+  border-radius: 14px 14px 0 0;
+}
+
+/* ==============================
+   Product Card — Hover Lift + Zoom
+   ============================== */
+.product:hover {
+  -webkit-box-shadow: 0 8px 28px rgba(0, 0, 0, 0.13);
+          box-shadow: 0 8px 28px rgba(0, 0, 0, 0.13);
+  -webkit-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+.product .img-prod img {
+  -webkit-transition: -webkit-transform 0.45s ease !important;
+  transition: transform 0.45s ease !important;
+}
+
+.product .img-prod:hover img,
+.product .img-prod:focus img {
+  -webkit-transform: scale(1.07) !important;
+      -ms-transform: scale(1.07) !important;
+          transform: scale(1.07) !important;
 }
