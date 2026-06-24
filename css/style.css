@@ -10095,12 +10095,10 @@ textarea.form-control {
 
   @media screen and (max-width: 768px) {
     .image-container-for-bg {
-        background-position: center -50px; 
-        width: 100%; 
-        zoom: 100%;
-        height: 20px; 
+        background-position: center top;
+        width: 100%;
     }
-    
+
   }
 
  .dropdown-lang{
