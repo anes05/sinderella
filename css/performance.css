@@ -212,3 +212,29 @@ body.page-leaving {
   color: #82ae46;
   border-left-color: #82ae46;
 }
+
+/* ==============================
+   Responsive Category Hero
+   ============================== */
+.hero-wrap.hero-bread.image-container-for-bg {
+  min-height: 340px;
+  background-attachment: scroll;
+}
+
+@media (max-width: 991px) {
+  .hero-wrap.hero-bread.image-container-for-bg {
+    min-height: 260px;
+    padding: 7em 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-wrap.hero-bread.image-container-for-bg {
+    min-height: 180px;
+    padding: 4em 0;
+  }
+  .hero-wrap.hero-bread.image-container-for-bg .bread {
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+}
