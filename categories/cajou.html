@@ -29,7 +29,7 @@
 	<link rel="stylesheet" href="../css/flaticon.css">
 	<link rel="stylesheet" href="../css/icomoon.css">
 	<link rel="stylesheet" href="../css/style.css?v=2">
-	<link rel="stylesheet" href="../css/performance.css?v=3">
+	<link rel="stylesheet" href="../css/performance.css?v=4">
 	<link rel="preload" as="image" href="../images/fruits_secs/mise_en_scene/cajou_copie.jpg">
 
 </head>
@@ -56,7 +56,7 @@
 							<a href="mailto:steinderella@yahoo.fr"><span class="text">steinderella@yahoo.fr</span></a>
 						</div>
 						<div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
-							<span class="text">Toujours a votre service ! </span>
+							<span class="text" data-i18n="topbar.service">Toujours à votre service !</span>
 						</div>
 					</div>
 				</div>
@@ -73,7 +73,7 @@
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a href="../index.html" class="nav-link">Home</a></li>
+					<li class="nav-item active"><a href="../index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
 
 					<li class="nav-item dropdown">
 						<!-- <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a> -->
@@ -109,17 +109,17 @@
 					</li>
 
 
-					<li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
-					<li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
+					<li class="nav-item"><a href="../about.html" class="nav-link" data-i18n="nav.about">À propos</a></li>
+					<li class="nav-item"><a href="../contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 						   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						  <span><i class="icon-globe"></i></span>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						  <a class="dropdown-lang">AR</a>
-						  <a class="dropdown-lang">EN</a>
-						  <a class="dropdown-lang">FR</a>
+						  <a class="dropdown-lang" data-lang="fr" onclick="setLang('fr')">FR</a>
+						  <a class="dropdown-lang" data-lang="en" onclick="setLang('en')">EN</a>
+						  <a class="dropdown-lang" data-lang="es" onclick="setLang('es')">ES</a>
 		  
 						</div>
 					  </li>
@@ -152,7 +152,7 @@
 							style="padding-top: 5%;"></a>
 				</div>
 				<div class="col-lg-6 product-details pl-md-5 ftco-animate">
-					<h3>Noix de Cajou</h3>
+					<h3 data-i18n="cajou.name">Noix de Cajou</h3>
 					<!-- <div class="rating d-flex">
 							<p class="text-left mr-4">
 								<a href="#" class="mr-2">5.0</a>
@@ -226,7 +226,7 @@
 		<div class="container">
 			<div class="row justify-content-center mb-3 pb-3">
 				<div class="col-md-12 heading-section text-center ftco-animate">
-					<span class="subheading">Produits relatif aux amandes</span>
+					<span class="subheading" data-i18n="cajou.products.title">Produits relatif aux noix de cajou</span>
 					<p>Déclinée en amandes entières on offre une grande diversité de formes et de saveurs.</p>
 				</div>
 			</div>
@@ -239,7 +239,7 @@
 								src="../images/fruits_secs/cajou/caramelise.jpg" alt="Colorlib Template">
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="">Cajou Caramelisé</a></h3>
+							<h3><a href="" data-i18n="cajou.caramelise">Cajou Caramelisé</a></h3>
 						</div>
 					</div>
 				</div>
@@ -252,7 +252,7 @@
 							<div class="overlay"></div>
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="">Cajou Croquant</a></h3>
+							<h3><a href="" data-i18n="cajou.croquant">Cajou Croquant</a></h3>
 
 						</div>
 					</div>
@@ -266,7 +266,7 @@
 							<div class="overlay"></div>
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="">Cajou Granulé Blanc</a></h3>
+							<h3><a href="" data-i18n="cajou.granule.blanc">Cajou Granulé Blanc</a></h3>
 						</div>
 					</div>
 				</div>
@@ -279,7 +279,7 @@
 							<div class="overlay"></div>
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="">Cajou granulée Torrifié</a></h3>
+							<h3><a href="" data-i18n="cajou.granule.torrifie">Cajou granulée Torrifié</a></h3>
 						</div>
 					</div>
 				</div>
@@ -293,7 +293,7 @@
 						loading="lazy" decoding="async" alt="Colorlib Template">
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="">Cajou Poudre blanche</a></h3>
+							<h3><a href="" data-i18n="cajou.poudre.blanche">Cajou Poudre blanche</a></h3>
 						</div>
 					</div>
 				</div>
@@ -305,7 +305,7 @@
 						loading="lazy" decoding="async" alt="Colorlib Template">
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="">Cajou Poudre Caramelisé</a></h3>
+							<h3><a href="" data-i18n="cajou.poudre.caramelise">Cajou Poudre Caramelisé</a></h3>
 						</div>
 					</div>
 				</div>
@@ -317,7 +317,7 @@
 						loading="lazy" decoding="async" alt="Colorlib Template">
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="">Cajou Poudre Corquante</a></h3>
+							<h3><a href="" data-i18n="cajou.poudre.croquant">Cajou Poudre Corquante</a></h3>
 						</div>
 					</div>
 				</div>
@@ -329,7 +329,7 @@
 						loading="lazy" decoding="async" alt="Colorlib Template">
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="">Cajou Poudre Torrifié</a></h3>
+							<h3><a href="" data-i18n="cajou.poudre.torrifie">Cajou Poudre Torrifié</a></h3>
 						</div>
 					</div>
 				</div>
@@ -341,7 +341,7 @@
 						loading="lazy" decoding="async" alt="Colorlib Template">
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="">Cajou Puré</a></h3>
+							<h3><a href="" data-i18n="cajou.puree">Cajou Puré</a></h3>
 						</div>
 					</div>
 				</div>
@@ -471,7 +471,8 @@
 	<script src="../js/scrollax.min.js"></script>
 	<script src="../js/google-map.js"></script>
 	<script src="../js/main.js?v=2"></script>
-	<script src="../js/performance.js?v=2"></script>
+	<script src="../js/i18n.js"></script>
+    <script src="../js/performance.js?v=2"></script>
 
 	<script>
 		$(document).ready(function () {

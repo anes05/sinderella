@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css?v=2">
-    <link rel="stylesheet" href="css/performance.css?v=3">
+    <link rel="stylesheet" href="css/performance.css?v=4">
   </head>
   <body class="goto-here">
 		<div class="py-1 bg-primary">
@@ -44,7 +44,7 @@
 						    <a href="mailto:steinderella@yahoo.fr"><span class="text">steinderella@yahoo.fr</span></a>
 					    </div>
 					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
-						    <span class="text">Toujours a votre service ! </span>
+						    <span class="text" data-i18n="topbar.service">Toujours à votre service !</span>
 					    </div>
 				    </div>
 			    </div>
@@ -60,7 +60,7 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
 	          <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
@@ -71,9 +71,9 @@
                 <a class="dropdown-item" href="checkout.html">Checkout</a>
               </div>
             </li>
-	          <li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
+	          <li class="nav-item active"><a href="about.html" class="nav-link" data-i18n="nav.about">À propos</a></li>
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -81,8 +81,8 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-lang" onclick="">AR</a>
-                <a class="dropdown-lang">EN</a>
-                <a class="dropdown-lang">FR</a>
+                <a class="dropdown-lang" data-lang="en" onclick="setLang('en')">EN</a>
+                <a class="dropdown-lang" data-lang="es" onclick="setLang('es')">ES</a>
 
               </div>
             </li>
@@ -351,7 +351,7 @@
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4 ml-md-5">
-              <h2 class="ftco-heading-2">Menu</h2>
+              <h2 class="ftco-heading-2" data-i18n="footer.menu">Menu</h2>
               <ul class="list-unstyled">
                 <li><a href="#" class="py-2 d-block">Shop</a></li>
                 <li><a href="#" class="py-2 d-block">About</a></li>
@@ -362,16 +362,16 @@
           </div>
           <div class="col-md-4">
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Help</h2>
+              <h2 class="ftco-heading-2" data-i18n="footer.help">Aide</h2>
               <div class="d-flex">
 	              <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
-	                <li><a href="#" class="py-2 d-block">Shipping Information</a></li>
-	                <li><a href="#" class="py-2 d-block">Returns &amp; Exchange</a></li>
-	                <li><a href="#" class="py-2 d-block">Terms &amp; Conditions</a></li>
-	                <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
+	                <li><a href="#" class="py-2 d-block" data-i18n="footer.shipping">Informations de livraison</a></li>
+	                <li><a href="#" class="py-2 d-block" data-i18n="footer.returns">Retours &amp; Échanges</a></li>
+	                <li><a href="#" class="py-2 d-block" data-i18n="footer.terms">Termes &amp; Conditions</a></li>
+	                <li><a href="#" class="py-2 d-block" data-i18n="footer.privacy">Politique de confidentialité</a></li>
 	              </ul>
 	              <ul class="list-unstyled">
-	                <li><a href="#" class="py-2 d-block">FAQs</a></li>
+	                <li><a href="#" class="py-2 d-block" data-i18n="footer.faq">FAQ</a></li>
 	                <li><a href="#" class="py-2 d-block">Contact</a></li>
 	              </ul>
 	            </div>
@@ -379,7 +379,7 @@
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<h2 class="ftco-heading-2" data-i18n="footer.questions">Des questions ?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
@@ -424,6 +424,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js?v=2"></script>
-  <script src="js/performance.js?v=2"></script>
+  <script src="js/i18n.js"></script>
+    <script src="js/performance.js?v=2"></script>
   </body>
 </html>

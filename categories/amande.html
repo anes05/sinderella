@@ -27,7 +27,7 @@
 	<link rel="stylesheet" href="../css/flaticon.css">
 	<link rel="stylesheet" href="../css/icomoon.css">
 	<link rel="stylesheet" href="../css/style.css?v=2">
-	<link rel="stylesheet" href="../css/performance.css?v=3">
+	<link rel="stylesheet" href="../css/performance.css?v=4">
 	<link  rel="preload"  as="image"  href="../images/fruits_secs/mise_en_scene/amande_copie.jpg" fetchpriority="high"> 
 
 </head>
@@ -54,7 +54,7 @@
 							<a href="mailto:steinderella@yahoo.fr"><span class="text">steinderella@yahoo.fr</span></a>
 						</div>
 						<div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
-							<span class="text">Toujours a votre service ! </span>
+							<span class="text" data-i18n="topbar.service">Toujours à votre service !</span>
 						</div>
 					</div>
 				</div>
@@ -71,7 +71,7 @@
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a href="../index.html" class="nav-link">Home</a></li>
+					<li class="nav-item active"><a href="../index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
 
 					<li class="nav-item dropdown">
 						<!-- <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a> -->
@@ -106,17 +106,17 @@
 						</div>
 					</li>
 
-					<li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
-					<li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
+					<li class="nav-item"><a href="../about.html" class="nav-link" data-i18n="nav.about">À propos</a></li>
+					<li class="nav-item"><a href="../contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 						   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						  <span><i class="icon-globe"></i></span>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						  <a class="dropdown-lang">AR</a>
-						  <a class="dropdown-lang">EN</a>
-						  <a class="dropdown-lang">FR</a>
+						  <a class="dropdown-lang" data-lang="fr" onclick="setLang('fr')">FR</a>
+						  <a class="dropdown-lang" data-lang="en" onclick="setLang('en')">EN</a>
+						  <a class="dropdown-lang" data-lang="es" onclick="setLang('es')">ES</a>
 		  
 						</div>
 					  </li>
@@ -131,7 +131,7 @@
 		<div class="container">
 			<div class="row no-gutters slider-text align-items-center justify-content-center">
 				<div class="col-md-9 ftco-animate text-center" style="transform: translateY(-145px) !important;">
-						<h1 class="mb-0 bread">Amande</h1>
+						<h1 class="mb-0 bread" data-i18n="amande.name">Amande</h1>
 
 				</div>
 			</div>
@@ -147,7 +147,7 @@
 							style="padding-top: 5%;"></a>
 				</div>
 				<div class="col-lg-6 product-details pl-md-5 ftco-animate">
-					<h3>Amande</h3>
+					<h3 data-i18n="amande.name">Amande</h3>
 					<!-- <div class="rating d-flex">
 							<p class="text-left mr-4">
 								<a href="#" class="mr-2">5.0</a>
@@ -224,7 +224,7 @@
 		<div class="container">
 			<div class="row justify-content-center mb-3 pb-3">
 				<div class="col-md-12 heading-section text-center ftco-animate">
-					<span class="subheading">Produits relatif aux amandes</span>
+					<span class="subheading" data-i18n="amande.products.title">Produits relatif aux amandes</span>
 					<p>Déclinée en amandes entières on offre une grande diversité de formes et de saveurs.</p>
 				</div>
 			</div>
@@ -238,7 +238,7 @@
 								alt="Colorlib Template">
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="">Amande Batonnet</a></h3>
+							<h3><a href="" data-i18n="amande.batonnet">Amande Batonnet</a></h3>
 						</div>
 					</div>
 				</div>
@@ -251,7 +251,7 @@
 							<div class="overlay"></div>
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="">Amande Batonnet Torrifie</a></h3>
+							<h3><a href="" data-i18n="amande.batonnet.torrifie">Amande Batonnet Torrifie</a></h3>
 
 						</div>
 					</div>
@@ -265,7 +265,7 @@
 							<div class="overlay"></div>
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="">Amande Caramelisé</a></h3>
+							<h3><a href="" data-i18n="amande.caramelise">Amande Caramelisé</a></h3>
 						</div>
 					</div>
 				</div>
@@ -278,7 +278,7 @@
 							<div class="overlay"></div>
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="">Amande Croquant</a></h3>
+							<h3><a href="" data-i18n="amande.croquant">Amande Croquant</a></h3>
 						</div>
 					</div>
 				</div>
@@ -292,7 +292,7 @@
 						loading="lazy" decoding="async" alt="Colorlib Template">
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="">Amande effilé</a></h3>
+							<h3><a href="" data-i18n="amande.effile">Amande effilé</a></h3>
 						</div>
 					</div>
 				</div>
@@ -305,7 +305,7 @@
 							<div class="overlay"></div>
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="#">granulé torrifié</a></h3>
+							<h3><a href="#" data-i18n="amande.granule.torrifie">granulé torrifié</a></h3>
 
 						</div>
 					</div>
@@ -319,7 +319,7 @@
 							<div class="overlay"></div>
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="#">granulés blanche</a></h3>
+							<h3><a href="#" data-i18n="amande.granules.blanches">granulés blanche</a></h3>
 						</div>
 					</div>
 				</div>
@@ -332,7 +332,7 @@
 							<div class="overlay"></div>
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="#">poudre blanche</a></h3>
+							<h3><a href="#" data-i18n="amande.poudre.blanche">poudre blanche</a></h3>
 						</div>
 					</div>
 				</div>
@@ -347,7 +347,7 @@
 						loading="lazy" decoding="async" alt="Colorlib Template">
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="">poudre caramelisé</a></h3>
+							<h3><a href="" data-i18n="amande.poudre.caramelise">poudre caramelisé</a></h3>
 						</div>
 					</div>
 				</div>
@@ -360,7 +360,7 @@
 							<div class="overlay"></div>
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="#">pourdre torrifié</a></h3>
+							<h3><a href="#" data-i18n="amande.poudre.torrifie">pourdre torrifié</a></h3>
 
 						</div>
 					</div>
@@ -374,7 +374,7 @@
 							<div class="overlay"></div>
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="#">poudre croquant</a></h3>
+							<h3><a href="#" data-i18n="amande.poudre.croquant">poudre croquant</a></h3>
 						</div>
 					</div>
 				</div>
@@ -492,7 +492,8 @@
 	<script src="../js/scrollax.min.js"></script>
 	<script src="../js/google-map.js"></script>
 	<script src="../js/main.js?v=2"></script>
-	<script src="../js/performance.js?v=2"></script>
+	<script src="../js/i18n.js"></script>
+    <script src="../js/performance.js?v=2"></script>
 
 	<script>
 		$(document).ready(function() {

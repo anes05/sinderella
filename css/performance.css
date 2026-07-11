@@ -226,15 +226,30 @@ body.page-leaving {
     min-height: 260px;
     padding: 7em 0;
   }
+  .hero-wrap.hero-bread.image-container-for-bg .ftco-animate {
+    transform: translateY(-60px) !important;
+  }
 }
 
 @media (max-width: 576px) {
   .hero-wrap.hero-bread.image-container-for-bg {
-    min-height: 180px;
-    padding: 4em 0;
+    min-height: 200px;
+    padding: 5em 0;
+  }
+  .hero-wrap.hero-bread.image-container-for-bg .ftco-animate {
+    transform: translateY(-30px) !important;
   }
   .hero-wrap.hero-bread.image-container-for-bg .bread {
     font-size: 22px;
     letter-spacing: 2px;
   }
+}
+
+/* ==============================
+   Language selector active state
+   ============================== */
+.dropdown-lang.lang-active {
+  color: #82ae46 !important;
+  border-left-color: #82ae46 !important;
+  font-weight: 700 !important;
 }
